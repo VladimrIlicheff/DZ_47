@@ -10,6 +10,7 @@ m = 3, n = 4.
 
 
 int GetNumber(string message)
+
 {
     
     Console.WriteLine(message);
@@ -26,7 +27,7 @@ double[,] InitMatrix(int m, int n)
     {
         for (var j = 0; j < n; j++)
         {
-            resultMatrix[i, j] =rnd.NextDouble()*(10 + 10)-10;
+            resultMatrix[i, j] = rnd.NextDouble()*(10 + 10)-10;
         }
     }
 
@@ -40,8 +41,8 @@ void PrintMatrix(double[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         
         {
-            
-            Console.Write($"{matrix[i, j]} ");
+            matrix [i,j]= Math.Round(matrix[i,j],1);
+            Console.Write($"{matrix[i, j]}       ");
         }
     
         Console.WriteLine();
